@@ -1,5 +1,6 @@
 package com.mov.movie_zone.movie;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -7,6 +8,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="movie_stats")
+@JsonPropertyOrder({"id", "title", "release_date", "vote_average", "popularity", "language", "overview"})
 public class Movie {
     @Id
     @Column(name = "id", unique = true)
